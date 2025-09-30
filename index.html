@@ -5,409 +5,240 @@
   <title>Optimization Results — Video Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      --maxw: 1000px;
-      --gap: 20px;
-      --soft: #f6f7f8;
-      --line: #e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-           margin: 0; color: #111; background: #fff; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
-    header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 24px; }
-    header h1 { margin: 0 0 6px; font-size: 1.6rem; }
-    header .meta { color: #444; line-height: 1.5; }
-    a { color: #0a58ca; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h2 { margin-top: 36px; }
-    h3 { margin-top: 28px; }
+    /* Element-only styles (no classes) */
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
+    header, main, footer { max-width: 900px; margin: 0 auto; padding: 20px; }
+    h1 { margin: 0 0 6px; font-size: 1.6rem; }
+    p { line-height: 1.5; }
+    h2 { margin-top: 48px; }
     table { width: 100%; border-collapse: collapse; margin: 14px 0 28px; }
-    th, td { border: 1px solid var(--line); padding: 10px 8px; text-align: left; }
-    th { background: var(--soft); }
-    .index-note { margin: 6px 0 16px; color: #333; }
-    .desc { background: var(--soft); padding: 16px; border: 1px solid var(--line); border-radius: 8px; }
-    .matrix-img { width: 100%; max-width: 900px; display: block; margin: 0 auto; }
-    .case { padding-top: 70px; margin-top: -70px; } /* anchor offset */
-    .media { margin: 18px 0 48px; }
-    video {
-  margin-bottom: 40px;
-  display: block;
-}
-
-img.case-summary {
-  width: 100%;
-  max-width: 900px;
-  display: block;
-  margin: 0 auto;
-}
-    footer { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 16px; color: #555; }
-    .muted { color: #666; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f2f2f2; }
+    video { display: block; margin: 10px 0 14px; }
+    img { display: block; width: 100%; max-width: 900px; margin: 0 auto 28px; height: auto; }
+    ul { margin: 8px 0 0 18px; }
+    footer { color: #666; border-top: 1px solid #eee; margin-top: 40px; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Optimization Results — Video Gallery</h1>
-      <div class="meta">
-        <strong>Ricardo Fitas</strong> — TU Darmstadt<br />
-        <a href="mailto:ricardo.fitas@tu-darmstadt.de">ricardo.fitas@tu-darmstadt.de</a>
-      </div>
-      <p class="index-note">
-        Here I am presenting the optimization results in video format. Description of each case is given below in the Optimization Case Matrix.
-      </p>
-    </header>
 
-    <!-- Index Table (Case -> Link) -->
-    <h2>Index</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Case</th>
-          <th>Video</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Update range if you add/remove cases -->
-        <tr><td>Case 1</td><td><a href="#case001">View</a></td></tr>
-        <tr><td>Case 2</td><td><a href="#case002">View</a></td></tr>
-        <tr><td>Case 3</td><td><a href="#case003">View</a></td></tr>
-        <tr><td>Case 4</td><td><a href="#case004">View</a></td></tr>
-        <tr><td>Case 5</td><td><a href="#case005">View</a></td></tr>
-        <tr><td>Case 6</td><td><a href="#case006">View</a></td></tr>
-        <tr><td>Case 7</td><td><a href="#case007">View</a></td></tr>
-        <tr><td>Case 8</td><td><a href="#case008">View</a></td></tr>
-        <tr><td>Case 9</td><td><a href="#case009">View</a></td></tr>
-        <tr><td>Case 10</td><td><a href="#case010">View</a></td></tr>
-        <tr><td>Case 11</td><td><a href="#case011">View</a></td></tr>
-        <tr><td>Case 12</td><td><a href="#case012">View</a></td></tr>
-        <tr><td>Case 13</td><td><a href="#case013">View</a></td></tr>
-        <tr><td>Case 14</td><td><a href="#case014">View</a></td></tr>
-        <tr><td>Case 15</td><td><a href="#case015">View</a></td></tr>
-        <tr><td>Case 16</td><td><a href="#case016">View</a></td></tr>
-        <tr><td>Case 17</td><td><a href="#case017">View</a></td></tr>
-        <tr><td>Case 18</td><td><a href="#case018">View</a></td></tr>
-        <tr><td>Case 19</td><td><a href="#case019">View</a></td></tr>
-        <tr><td>Case 20</td><td><a href="#case020">View</a></td></tr>
-        <tr><td>Case 21</td><td><a href="#case021">View</a></td></tr>
-        <tr><td>Case 22</td><td><a href="#case022">View</a></td></tr>
-        <tr><td>Case 23</td><td><a href="#case023">View</a></td></tr>
-        <tr><td>Case 24</td><td><a href="#case024">View</a></td></tr>
-        <tr><td>Case 25</td><td><a href="#case025">View</a></td></tr>
-        <tr><td>Case 26</td><td><a href="#case026">View</a></td></tr>
-        <tr><td>Case 27</td><td><a href="#case027">View</a></td></tr>
-        <tr><td>Case 28</td><td><a href="#case028">View</a></td></tr>
-        <tr><td>Case 29</td><td><a href="#case029">View</a></td></tr>
-        <tr><td>Case 30</td><td><a href="#case030">View</a></td></tr>
-        <tr><td>Case 31</td><td><a href="#case031">View</a></td></tr>
-        <tr><td>Case 32</td><td><a href="#case032">View</a></td></tr>
-        <tr><td>Case 33</td><td><a href="#case033">View</a></td></tr>
-      </tbody>
-    </table>
+<header>
+  <h1>Optimization Results — Video Gallery</h1>
+  <p><strong>Ricardo Fitas</strong> — TU Darmstadt<br>
+     <a href="mailto:ricardo.fitas@tu-darmstadt.de">ricardo.fitas@tu-darmstadt.de</a></p>
+  <p>Here I am presenting the optimization results in video format. Description of each case is given below in the Optimization Case Matrix.</p>
+</header>
 
-    
-    <h2>Optimization Case Matrix</h2>
-      <img class="matrix-img" src="Outputs/optimization_matrix.png" alt="" />
+<main>
 
-<div class="legend">
-  <p><strong>Legend</strong></p>
+  <!-- Index -->
+  <h2>Index</h2>
+  <table>
+    <thead><tr><th>Case</th><th>Video</th></tr></thead>
+    <tbody>
+      <tr><td>Case 1</td><td><a href="#case001">View</a></td></tr>
+      <tr><td>Case 2</td><td><a href="#case002">View</a></td></tr>
+      <tr><td>Case 3</td><td><a href="#case003">View</a></td></tr>
+      <tr><td>Case 4</td><td><a href="#case004">View</a></td></tr>
+      <tr><td>Case 5</td><td><a href="#case005">View</a></td></tr>
+      <tr><td>Case 6</td><td><a href="#case006">View</a></td></tr>
+      <tr><td>Case 7</td><td><a href="#case007">View</a></td></tr>
+      <tr><td>Case 8</td><td><a href="#case008">View</a></td></tr>
+      <tr><td>Case 9</td><td><a href="#case009">View</a></td></tr>
+      <tr><td>Case 10</td><td><a href="#case010">View</a></td></tr>
+      <tr><td>Case 11</td><td><a href="#case011">View</a></td></tr>
+      <tr><td>Case 12</td><td><a href="#case012">View</a></td></tr>
+      <tr><td>Case 13</td><td><a href="#case013">View</a></td></tr>
+      <tr><td>Case 14</td><td><a href="#case014">View</a></td></tr>
+      <tr><td>Case 15</td><td><a href="#case015">View</a></td></tr>
+      <tr><td>Case 16</td><td><a href="#case016">View</a></td></tr>
+      <tr><td>Case 17</td><td><a href="#case017">View</a></td></tr>
+      <tr><td>Case 18</td><td><a href="#case018">View</a></td></tr>
+      <tr><td>Case 19</td><td><a href="#case019">View</a></td></tr>
+      <tr><td>Case 20</td><td><a href="#case020">View</a></td></tr>
+      <tr><td>Case 21</td><td><a href="#case021">View</a></td></tr>
+      <tr><td>Case 22</td><td><a href="#case022">View</a></td></tr>
+      <tr><td>Case 23</td><td><a href="#case023">View</a></td></tr>
+      <tr><td>Case 24</td><td><a href="#case024">View</a></td></tr>
+      <tr><td>Case 25</td><td><a href="#case025">View</a></td></tr>
+      <tr><td>Case 26</td><td><a href="#case026">View</a></td></tr>
+      <tr><td>Case 27</td><td><a href="#case027">View</a></td></tr>
+      <tr><td>Case 28</td><td><a href="#case028">View</a></td></tr>
+      <tr><td>Case 29</td><td><a href="#case029">View</a></td></tr>
+      <tr><td>Case 30</td><td><a href="#case030">View</a></td></tr>
+      <tr><td>Case 31</td><td><a href="#case031">View</a></td></tr>
+      <tr><td>Case 32</td><td><a href="#case032">View</a></td></tr>
+      <tr><td>Case 33</td><td><a href="#case033">View</a></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Matrix + legend -->
+  <h2>Optimization Case Matrix</h2>
+  <img src="Outputs/optimization_matrix.png" alt="Optimization matrix for all cases">
+
+  <h3>Legend</h3>
   <ul>
-    <li>(1) thickness of liners and flute goes from 0.1 to 0.5 mm</li>
-    <li>* thickness of liners and flute are between 0.15 and 0.25 mm</li>
-    <li><strong>2B / 2C</strong>: the design vector has two variables, wavelength and height; B and C correspond to the flute types. Ranges vary according to DIN 55468-1</li>
-    <li><strong>2 / 4 / 5</strong>: the design vector has two, four, or five variables, respectively. The additional two correspond to the thickness of the liners and flute; the last addition is an independent variable representing the thickness of the bottom liner, separated from the top liner</li>
-    <li><strong>CP</strong>: NURBS control points</li>
-    <li><strong>7v(r** &gt; X)</strong>: the minimum radius of curvature must be higher than X (in mm)</li>
-    <li><strong>H1</strong>: 50 particles &amp; 80 iterations (inertia weight = 0.7)</li>
-    <li><strong>H2</strong>: 20 particles &amp; 200 iterations (inertia weight = 0.9)</li>
-    <li><strong>H3</strong>: 10 particles &amp; 200 iterations (inertia weight = 0.9)</li>
-     </ul>
-</div>
-<div class="Objective Functions">
-<p><strong>Objective Functions</strong></p>
-<ul>
-<li><strong>I/&lambda;</strong>: Geometric inertia per wavelength (not the true physical moment of inertia). Influences the <em>Edge Crush Test (ECT)</em>.</li>
-<li><strong>A/&lambda;</strong>: Cross-sectional area per wavelength. Influences the total weight.</li>
-<li><strong>Ez</strong>: Out-of-plane stiffness. Influences the <em>Flat Crush Test (FCT)</em>.</li>
-</ul>
-</div>
+    <li>(1) Thickness of liners and flute ranges from 0.1 to 0.5 mm.</li>
+    <li>* Thickness of liners and flute are between 0.15 and 0.25 mm.</li>
+    <li><strong>2B / 2C</strong>: The design vector has two variables, wavelength and height; B and C correspond to flute types. Ranges vary according to DIN 55468-1.</li>
+    <li><strong>2 / 4 / 5</strong>: The design vector has two, four, or five variables, respectively. The additional two correspond to the thickness of the liners and flute; the last addition is an independent variable representing the thickness of the bottom liner, separated from the top liner.</li>
+    <li><strong>CP</strong>: NURBS control points.</li>
+    <li><strong>7v(r** &gt; X)</strong>: The minimum radius of curvature must be greater than X (in mm).</li>
+    <li><strong>H1</strong>: 50 particles &amp; 80 iterations (inertia weight = 0.7).</li>
+    <li><strong>H2</strong>: 20 particles &amp; 200 iterations (inertia weight = 0.9).</li>
+    <li><strong>H3</strong>: 10 particles &amp; 200 iterations (inertia weight = 0.9).</li>
+  </ul>
 
-    <h2 id="case001">Case 1</h2>
-    <video controls 
-  autoplay 
-  muted 
-  loop 
-  playsinline 
-  preload="metadata"><source src="Outputs/videos/C001.mp4" type="video/mp4"></video>
+  <h3>Objective Functions</h3>
+  <ul>
+    <li><strong>I/&lambda;</strong>: Geometric inertia per wavelength (not the true physical moment of inertia). Influences the <em>Edge Crush Test (ECT)</em>.</li>
+    <li><strong>A/&lambda;</strong>: Cross-sectional area per wavelength. Influences the total weight.</li>
+    <li><strong>Ez</strong>: Out-of-plane stiffness. Influences the <em>Flat Crush Test (FCT)</em>.</li>
+  </ul>
 
-  
-      <img class="case-summary" src="Outputs/C001_summary.png" alt="" />
+  <!-- Video sections — simple template: H2 + video + image (no classes) -->
+  <h2 id="case001">Case 1</h2>
+  <video width="720" controls><source src="Outputs/videos/C001.mp4" type="video/mp4"></video>
+  <img src="Outputs/C001_summary.png" alt="Case 1 summary">
 
+  <h2 id="case002">Case 2</h2>
+  <video width="720" controls><source src="Outputs/videos/C002.mp4" type="video/mp4"></video>
+  <img src="Outputs/C002_summary.png" alt="Case 2 summary">
 
-    <h2 id="case002" class="case">Case 2</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C002.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C002_summary.png" alt="" />
-    </div>
+  <h2 id="case003">Case 3</h2>
+  <video width="720" controls><source src="Outputs/videos/C003.mp4" type="video/mp4"></video>
+  <img src="Outputs/C003_summary.png" alt="Case 3 summary">
 
-    <h2 id="case003" class="case">Case 3</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C003.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C003_summary.png" alt="" />
-    </div>
+  <h2 id="case004">Case 4</h2>
+  <video width="720" controls><source src="Outputs/videos/C004.mp4" type="video/mp4"></video>
+  <img src="Outputs/C004_summary.png" alt="Case 4 summary">
 
-    <h2 id="case004" class="case">Case 4</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C004.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C004_summary.png" alt="" />
-    </div>
+  <h2 id="case005">Case 5</h2>
+  <video width="720" controls><source src="Outputs/videos/C005.mp4" type="video/mp4"></video>
+  <img src="Outputs/C005_summary.png" alt="Case 5 summary">
 
-    <h2 id="case005" class="case">Case 5</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C005.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C005_summary.png" alt="" />
-    </div>
+  <h2 id="case006">Case 6</h2>
+  <video width="720" controls><source src="Outputs/videos/C006.mp4" type="video/mp4"></video>
+  <img src="Outputs/C006_summary.png" alt="Case 6 summary">
 
-    <h2 id="case006" class="case">Case 6</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C006.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C006_summary.png" alt="" />
-    </div>
+  <h2 id="case007">Case 7</h2>
+  <video width="720" controls><source src="Outputs/videos/C007.mp4" type="video/mp4"></video>
+  <img src="Outputs/C007_summary.png" alt="Case 7 summary">
 
-    <h2 id="case007" class="case">Case 7</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C007.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C007_summary.png" alt="" />
-    </div>
+  <h2 id="case008">Case 8</h2>
+  <video width="720" controls><source src="Outputs/videos/C008.mp4" type="video/mp4"></video>
+  <img src="Outputs/C008_summary.png" alt="Case 8 summary">
 
-    <h2 id="case008" class="case">Case 8</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C008.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C008_summary.png" alt="" />
-    </div>
+  <h2 id="case009">Case 9</h2>
+  <video width="720" controls><source src="Outputs/videos/C009.mp4" type="video/mp4"></video>
+  <img src="Outputs/C009_summary.png" alt="Case 9 summary">
 
-    <h2 id="case009" class="case">Case 9</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C009.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C009_summary.png" alt="" />
-    </div>
+  <h2 id="case010">Case 10</h2>
+  <video width="720" controls><source src="Outputs/videos/C010.mp4" type="video/mp4"></video>
+  <img src="Outputs/C010_summary.png" alt="Case 10 summary">
 
-    <h2 id="case010" class="case">Case 10</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C010.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C010_summary.png" alt="" />
-    </div>
+  <h2 id="case011">Case 11</h2>
+  <video width="720" controls><source src="Outputs/videos/C011.mp4" type="video/mp4"></video>
+  <img src="Outputs/C011_summary.png" alt="Case 11 summary">
 
-    <h2 id="case011" class="case">Case 11</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C011.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C011_summary.png" alt="" />
-    </div>
+  <h2 id="case012">Case 12</h2>
+  <video width="720" controls><source src="Outputs/videos/C012.mp4" type="video/mp4"></video>
+  <img src="Outputs/C012_summary.png" alt="Case 12 summary">
 
-    <h2 id="case012" class="case">Case 12</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C012.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C012_summary.png" alt="" />
-    </div>
+  <h2 id="case013">Case 13</h2>
+  <video width="720" controls><source src="Outputs/videos/C013.mp4" type="video/mp4"></video>
+  <img src="Outputs/C013_summary.png" alt="Case 13 summary">
 
-    <h2 id="case013" class="case">Case 13</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C013.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C013_summary.png" alt="" />
-    </div>
+  <h2 id="case014">Case 14</h2>
+  <video width="720" controls><source src="Outputs/videos/C014.mp4" type="video/mp4"></video>
+  <img src="Outputs/C014_summary.png" alt="Case 14 summary">
 
-    <h2 id="case014" class="case">Case 14</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C014.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C014_summary.png" alt="" />
-    </div>
+  <h2 id="case015">Case 15</h2>
+  <video width="720" controls><source src="Outputs/videos/C015.mp4" type="video/mp4"></video>
+  <img src="Outputs/C015_summary.png" alt="Case 15 summary">
 
-    <h2 id="case015" class="case">Case 15</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C015.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C015_summary.png" alt="" />
-    </div>
+  <h2 id="case016">Case 16</h2>
+  <video width="720" controls><source src="Outputs/videos/C016.mp4" type="video/mp4"></video>
+  <img src="Outputs/C016_summary.png" alt="Case 16 summary">
 
-    <h2 id="case016" class="case">Case 16</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C016.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C016_summary.png" alt="" />
-    </div>
+  <h2 id="case017">Case 17</h2>
+  <video width="720" controls><source src="Outputs/videos/C017.mp4" type="video/mp4"></video>
+  <img src="Outputs/C017_summary.png" alt="Case 17 summary">
 
-    <h2 id="case017" class="case">Case 17</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C017.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C017_summary.png" alt="" />
-    </div>
+  <h2 id="case018">Case 18</h2>
+  <video width="720" controls><source src="Outputs/videos/C018.mp4" type="video/mp4"></video>
+  <img src="Outputs/C018_summary.png" alt="Case 18 summary">
 
-    <h2 id="case018" class="case">Case 18</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C018.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C018_summary.png" alt="" />
-    </div>
+  <h2 id="case019">Case 19</h2>
+  <video width="720" controls><source src="Outputs/videos/C019.mp4" type="video/mp4"></video>
+  <img src="Outputs/C019_summary.png" alt="Case 19 summary">
 
-    <h2 id="case019" class="case">Case 19</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C019.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C019_summary.png" alt="" />
-    </div>
+  <h2 id="case020">Case 20</h2>
+  <video width="720" controls><source src="Outputs/videos/C020.mp4" type="video/mp4"></video>
+  <img src="Outputs/C020_summary.png" alt="Case 20 summary">
 
-    <h2 id="case020" class="case">Case 20</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C020.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C020_summary.png" alt="" />
-    </div>
+  <h2 id="case021">Case 21</h2>
+  <video width="720" controls><source src="Outputs/videos/C021.mp4" type="video/mp4"></video>
+  <img src="Outputs/C021_summary.png" alt="Case 21 summary">
 
-    <h2 id="case021" class="case">Case 21</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C021.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C021_summary.png" alt="" />
-    </div>
+  <h2 id="case022">Case 22</h2>
+  <video width="720" controls><source src="Outputs/videos/C022.mp4" type="video/mp4"></video>
+  <img src="Outputs/C022_summary.png" alt="Case 22 summary">
 
-    <h2 id="case022" class="case">Case 22</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C022.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C022_summary.png" alt="" />
-    </div>
+  <h2 id="case023">Case 23</h2>
+  <video width="720" controls><source src="Outputs/videos/C023.mp4" type="video/mp4"></video>
+  <img src="Outputs/C023_summary.png" alt="Case 23 summary">
 
-    <h2 id="case023" class="case">Case 23</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C023.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C023_summary.png" alt="" />
-    </div>
+  <h2 id="case024">Case 24</h2>
+  <video width="720" controls><source src="Outputs/videos/C024.mp4" type="video/mp4"></video>
+  <img src="Outputs/C024_summary.png" alt="Case 24 summary">
 
-    <h2 id="case024" class="case">Case 24</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C024.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C024_summary.png" alt="" />
-    </div>
+  <h2 id="case025">Case 25</h2>
+  <video width="720" controls><source src="Outputs/videos/C025.mp4" type="video/mp4"></video>
+  <img src="Outputs/C025_summary.png" alt="Case 25 summary">
 
-    <h2 id="case025" class="case">Case 25</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C025.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C025_summary.png" alt="" />
-    </div>
+  <h2 id="case026">Case 26</h2>
+  <video width="720" controls><source src="Outputs/videos/C026.mp4" type="video/mp4"></video>
+  <img src="Outputs/C026_summary.png" alt="Case 26 summary">
 
-    <h2 id="case026" class="case">Case 26</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C026.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C026_summary.png" alt="" />
-    </div>
+  <h2 id="case027">Case 27</h2>
+  <video width="720" controls><source src="Outputs/videos/C027.mp4" type="video/mp4"></video>
+  <img src="Outputs/C027_summary.png" alt="Case 27 summary">
 
-    <h2 id="case027" class="case">Case 27</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C027.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C027_summary.png" alt="" />
-    </div>
+  <h2 id="case028">Case 28</h2>
+  <video width="720" controls><source src="Outputs/videos/C028.mp4" type="video/mp4"></video>
+  <img src="Outputs/C028_summary.png" alt="Case 28 summary">
 
-    <h2 id="case028" class="case">Case 28</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C028.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C028_summary.png" alt="" />
-    </div>
+  <h2 id="case029">Case 29</h2>
+  <video width="720" controls><source src="Outputs/videos/C029.mp4" type="video/mp4"></video>
+  <img src="Outputs/C029_summary.png" alt="Case 29 summary">
 
-    <h2 id="case029" class="case">Case 29</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C029.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C029_summary.png" alt="" />
-    </div>
+  <h2 id="case030">Case 30</h2>
+  <video width="720" controls><source src="Outputs/videos/C030.mp4" type="video/mp4"></video>
+  <img src="Outputs/C030_summary.png" alt="Case 30 summary">
 
-    <h2 id="case030" class="case">Case 30</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C030.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C030_summary.png" alt="" />
-    </div>
+  <h2 id="case031">Case 31</h2>
+  <video width="720" controls><source src="Outputs/videos/C031.mp4" type="video/mp4"></video>
+  <img src="Outputs/C031_summary.png" alt="Case 31 summary">
 
-    <h2 id="case031" class="case">Case 31</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C031.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C031_summary.png" alt="" />
-    </div>
+  <h2 id="case032">Case 32</h2>
+  <video width="720" controls><source src="Outputs/videos/C032.mp4" type="video/mp4"></video>
+  <img src="Outputs/C032_summary.png" alt="Case 32 summary">
 
-    <h2 id="case032" class="case">Case 32</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C032.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C032_summary.png" alt="" />
-    </div>
+  <h2 id="case033">Case 33</h2>
+  <video width="720" controls><source src="Outputs/videos/C033.mp4" type="video/mp4"></video>
+  <img src="Outputs/C033_summary.png" alt="Case 33 summary">
 
-    <h2 id="case033" class="case">Case 33</h2>
-    <div class="media">
-      <video controls preload="metadata">
-        <source src="Outputs/videos/C033.mp4" type="video/mp4" />
-      </video>
-      <img class="case-summary" src="Outputs/C033_summary.png" alt="" />
-    </div>
+</main>
 
-    <footer class="muted">
-      © <span id="y"></span> Ricardo Fitas
-    </footer>
-  </div>
+<footer>
+  © <span id="y"></span> Ricardo Fitas
+</footer>
 
-  <script>
-    // Update footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
