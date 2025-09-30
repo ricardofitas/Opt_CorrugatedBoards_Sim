@@ -30,7 +30,17 @@
     .matrix-img { width: 100%; max-width: 900px; display: block; margin: 0 auto; }
     .case { padding-top: 70px; margin-top: -70px; } /* anchor offset */
     .media { margin: 18px 0 48px; }
-    video, img.case-summary { width: 100%; max-width: 900px; display: block; margin: 0 auto; }
+    video {
+  margin-bottom: 40px;
+  display: block;
+}
+
+img.case-summary {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+}
     footer { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 16px; color: #555; }
     .muted { color: #666; }
   </style>
@@ -123,7 +133,7 @@
 </div>
 
     <h2 id="case001">Case 1</h2>
-    <video controls><source src="Outputs/videos/C001.mp4" type="video/mp4"></video>
+    <video width="720" controls><source src="Outputs/videos/C001.mp4" type="video/mp4"></video>
 
   
       <img class="case-summary" src="Outputs/C001_summary.png" alt="" />
